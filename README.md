@@ -1,3 +1,2 @@
 # KrokDoPrzodu 
 
-SIX SEVEN

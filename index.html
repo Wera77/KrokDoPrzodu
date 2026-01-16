@@ -4,10 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
 </head>
 <body>
-    Uwuuuu waiwai! tsts
+<!-----------------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------->
+    <header style="
+    background: #111827;
+    color: white;
+    padding: 2vh;
+    display: flex;  
+    align-items: center;
+    position: sticky;
+    justify-content: space-between;
+  ">
+    <!--Logo-->
+    <div style="font-size: 4vh; font-family:Brush Script MT, Brush Script Std, cursive">
+        <b><span style="color:#98B6C3">KrokDo</span>Przodu</b>
+    </div>
 
-    six seven
+    <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
+        <input type="checkbox" id="drpBut" class="dropButton"></input> <label for="drpBut" class="menu-label">Menu ▾</label> <!--TODO: CSS-->
+        <div class="dropContent">                                                                                   <!--TODO: CSS-->
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">AAAAA</a>            
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">BBBBBB</a>
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">CCCCCCC</a>
+        </div>
+    </nav>
+
+    <style>
+.dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    
+    .dropButton {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+/*
+    .menu-label {
+        display: inline-block;
+        padding: 10px 16px;
+        background: #333;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px;
+    }
+*/
+
+    /* Show dropdown when checkbox is checked */
+    #drpBut:checked ~ .dropContent {
+        display: block;
+    }
+
+    .dropContent {
+        display: none;
+        position: absolute;
+        background-color: #111827;
+/*        left: 0;
+        top: 100%;
+        min-width: 140px;
+        background: #333;
+        border: 1px solid #555;
+        border-radius: 4px;
+        margin-top: 4px;
+        z-index: 10;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);*/
+    }
+
+    .dropContent a {
+        display: block;
+        
+ /*       padding: 10px 16px;
+        color: white;
+        text-decoration: none;*/
+    }
+
+
+
+        
+    </style>
 </body>
 </html>
