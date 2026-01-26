@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDP</title>
+</head>
+<body>
+    
+<div id="reader"></div>
+<div id="result"></div>
+
+
+
+
+
+
+
+<script>
+function onScanSuccess(decodedText, decodedResult) {
+    
+   console.log({decodedText});
+    }
+
+let codeScanner = new Html5QrcodeScanner(
+    "reader", 
+    { fps: 10,
+      qrbox: {width: 250, height: 250}, 
+ //     supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]                         TODO: uncomment when we get real domain
+}, 
+    
+    
+);
+function onScanFailure(error) {/*leave it empty*/}
+
+codeScanner.render(onScanSuccess, onScanFailure);
+
+</script>
+</body>
+</html>
