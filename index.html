@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Krok do przodu</title>
+    <link rel="stylesheet" href = "style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
-<body>
-    
+<body class="sb-expanded">
+  <aside>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" class="active">
+            <i class="bx bx-home-circle"></i>
+            <span>O nas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-info-circle'></i>
+            <span>Jak to działa?</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-map'></i> 
+            <span>Mapa i lista punktów</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-qr-scan'></i>  
+            <span>Skaner kodów QR</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-trophy'></i>   
+            <span>Tabele wyników</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-resize-btn>
+            <i class="bx bx-chevrons-right"></i>
+            <span>Zwiń</span>
+          </a>
+        </li>
+        </ul>
+    </nav>
+  </aside>
+
+  <div class="placeholder">
+    <div class="ph-1"></div>
+    <div class="ph-2"></div>
+    <div class="ph-3"></div>
+    <div class="ph-4"></div>
+    <div class="ph-5"></div>
+    <div class="ph-6"></div>
+    <div class="ph-7"></div>
+    <div class="ph-8"></div>
+  </div>
+
+
+  <main>
+
+  </main>
+
+  <script>
+    const resizeBtn = document.querySelector('[data-resize-btn]');
+
+    resizeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.toggle('sb-expanded');
+    });
+  </script>
 </body>
 </html>
