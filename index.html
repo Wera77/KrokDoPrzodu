@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Krok do przodu</title>
     <link rel="stylesheet" href = "style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -76,5 +77,70 @@
       document.body.classList.toggle('sb-expanded');
     });
   </script>
+=======
+    <title>Document</title>
+
+
+</head>
+<body>
+<!-----------------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------->
+    <header style="
+    background: #111827;
+    color: white;
+    padding: 2vh;
+    display: flex;  
+    align-items: center;
+    position: sticky;
+    justify-content: space-between;
+  ">
+    <!--Logo-->
+    <div style="font-size: 4vh; font-family:Brush Script MT, Brush Script Std, cursive">
+        <b><span style="color:#98B6C3">KrokDo</span>Przodu</b>
+    </div>
+
+    <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
+        <input type="checkbox" id="drpBut" class="dropButton"></input> <label for="drpBut" class="menu-label">Menu ▾</label> <!--TODO: CSS-->
+        <div class="dropContent">                                                                                   <!--TODO: CSS-->
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">AAAAA</a>            
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">BBBBBB</a>
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">CCCCCCC</a>
+        </div>
+    </nav>
+
+    <style>
+.dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    
+    .dropButton {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    #drpBut:checked ~ .dropContent {
+        display: block;
+    }
+
+    .dropContent {
+        display: none;
+        position: absolute;
+        background-color: #111827;
+
+    }
+
+    .dropContent a {
+        display: block;
+
+    }
+
+
+
+        
+    </style>
+>>>>>>> bbe865e6a6f15ef54083f3b388c36e38b59549be
 </body>
 </html>
