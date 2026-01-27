@@ -1,5 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
+<!--TODO-SIDEBAR:
+make extend button in header;
+remove extended version of sidebar;
+make colabsed version the deafult;
+make sidebar deafult to hidden; 
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +16,86 @@
 
 </head>
 <body class="sb-expanded">
+  
+
+    <header style="
+    background: #111827;
+    color: white;
+    padding: 2vh;
+    display:inline-flex;  
+    align-items: center;
+    position: sticky;
+    justify-content:space-between;
+    width: 100%;
+
+  ">
+    <!--Logo-->
+    <div style="font-size: 4vh; font-family:Brush Script MT, Brush Script Std, cursive; ">
+        <b><span style="color:#98B6C3; " d>KrokDo</span>Przodu</b>
+    </div>
+    
+
+    <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
+        <input type="checkbox" id="drpBut" class="dropButton"></input> <label for="drpBut" class="menu-label">Menu ▾</label>
+        <div class="dropContent">                                                                                  
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">AAAAA</a>            
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">BBBBBB</a>
+            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">CCCCCCC</a>
+        </div>
+    </nav>
+    </header>
+
+     <style>
+.dropdown {
+        position: relative;
+        display: inline-block;
+        
+    }
+
+    
+    .dropButton {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    #drpBut:checked ~ .dropContent {
+        display: block;
+    }
+
+    .dropContent {
+        display: none;
+        position: absolute;
+        background-color: #111827;
+
+    }
+
+    .dropContent a {
+        display: block;
+
+    }
+
+
+
+        
+    </style>
+
+ 
+
   <aside>
     <nav>
       <ul>
         <li>
-          <a href="#" class="active">
+          <a href="index.html" class="active">
             <i class="bx bx-home-circle"></i>
-            <span>O nas</span>
+            <span>Index</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="account/signin.html">
             <i class='bx bx-info-circle'></i>
-            <span>Jak to działa?</span>
+            <span>Signin</span>
           </a>
         </li>
         <li>
@@ -31,7 +105,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="scanner.html">
             <i class='bx  bx-qr-scan'></i>  
             <span>Skaner kodów QR</span>
           </a>
@@ -76,68 +150,12 @@
       document.body.classList.toggle('sb-expanded');
     });
   </script>
-    <title>Document</title>
+  
 
 
-</head>
-<body>
+
 <!-----------------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------->
-    <header style="
-    background: #111827;
-    color: white;
-    padding: 2vh;
-    display: flex;  
-    align-items: center;
-    position: sticky;
-    justify-content: space-between;
-  ">
-    <!--Logo-->
-    <div style="font-size: 4vh; font-family:Brush Script MT, Brush Script Std, cursive">
-        <b><span style="color:#98B6C3">KrokDo</span>Przodu</b>
-    </div>
 
-    <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
-        <input type="checkbox" id="drpBut" class="dropButton"></input> <label for="drpBut" class="menu-label">Menu ▾</label> <!--TODO: CSS-->
-        <div class="dropContent">                                                                                   <!--TODO: CSS-->
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">AAAAA</a>            
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">BBBBBB</a>
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">CCCCCCC</a>
-        </div>
-    </nav>
-
-    <style>
-.dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    
-    .dropButton {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-
-    #drpBut:checked ~ .dropContent {
-        display: block;
-    }
-
-    .dropContent {
-        display: none;
-        position: absolute;
-        background-color: #111827;
-
-    }
-
-    .dropContent a {
-        display: block;
-
-    }
-
-
-
-        
-    </style>
+   
 </body>
 </html>
