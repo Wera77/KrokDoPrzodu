@@ -4,7 +4,7 @@
 <!--TODO-SIDEBAR:
 make extend button in header;
 remove extended version of sidebar;
-make colabsed version the deafult;
+make collapsed version the deafult;
 make sidebar deafult to hidden; 
 -->
 <head>
@@ -17,6 +17,8 @@ make sidebar deafult to hidden;
 </head>
 <body class="sb-expanded">
   
+  <div class="container">
+
 
     <header style="
     background: #111827;
@@ -38,9 +40,38 @@ make sidebar deafult to hidden;
     <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
         <input type="checkbox" id="drpBut" class="dropButton"></input> <label for="drpBut" class="menu-label">Menu ▾</label>
         <div class="dropContent">                                                                                  
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">AAAAA</a>            
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">BBBBBB</a>
-            <a href="PlHold.html" style="color:white; margin:2vh; text-decoration:none;">CCCCCCC</a>
+            <ul>
+        <li>
+          <a href="index.html" class="active">
+            <i class="bx bx-home-circle"></i>
+            <span>Index</span>
+          </a>
+        </li>
+        <li>
+          <a href="account/signin.html">
+            <i class='bx bx-info-circle'></i>
+            <span>Signin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-map'></i> 
+            <span>Mapa i lista punktów</span>
+          </a>
+        </li>
+        <li>
+          <a href="scanner.html">
+            <i class='bx  bx-qr-scan'></i>  
+            <span>Skaner kodów QR</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx  bx-trophy'></i>   
+            <span>Tabele wyników</span>
+          </a>
+        </li>
+        </ul>
         </div>
     </nav>
     </header>
@@ -81,81 +112,69 @@ make sidebar deafult to hidden;
         
     </style>
 
- 
-
-  <aside>
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html" class="active">
-            <i class="bx bx-home-circle"></i>
-            <span>Index</span>
-          </a>
-        </li>
-        <li>
-          <a href="account/signin.html">
-            <i class='bx bx-info-circle'></i>
-            <span>Signin</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx  bx-map'></i> 
-            <span>Mapa i lista punktów</span>
-          </a>
-        </li>
-        <li>
-          <a href="scanner.html">
-            <i class='bx  bx-qr-scan'></i>  
-            <span>Skaner kodów QR</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx  bx-trophy'></i>   
-            <span>Tabele wyników</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-resize-btn>
-            <i class="bx bx-chevrons-right"></i>
-            <span>Zwiń</span>
-          </a>
-        </li>
-        </ul>
-    </nav>
-  </aside>
-
-  <div class="placeholder">
-    <div class="ph-1"></div>
-    <div class="ph-2"></div>
-    <div class="ph-3"></div>
-    <div class="ph-4"></div>
-    <div class="ph-5"></div>
-    <div class="ph-6"></div>
-    <div class="ph-7"></div>
-    <div class="ph-8"></div>
-  </div>
-
-
-  <main>
-
-  </main>
-
-  <script>
-    const resizeBtn = document.querySelector('[data-resize-btn]');
-
-    resizeBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.body.classList.toggle('sb-expanded');
-    });
-  </script>
-  
-
-
-
 <!-----------------------------------------------------------------------------------------HEADER---------------------------------------------------------------------------------------------->
 
-   
+<main>
+  <div class="page-width">
+    <h2>Witamy w KrokDoPrzodu!</h2>
+    <p>To jest strona główna. Użyj nawigacji powyżej, aby poruszać się po różnych sekcjach.</p>
+    <p>ebwuqgvfyqeyduhewmmmmmmmmxdejwbf4yf4yrg4rygeuh2wi2ji2jwh</p>
+  </div>
+
+  <section class="multicolumn">
+    <div>
+      <h4>hdbey</h4>
+    </div>
+    <div>
+      <h4>hdbey</h4>
+    </div>
+    <div>
+      <h4>hdbey</h4>
+    </div>
+  </section>
+</main>
+
+</div>
+<!----------------------------------------------MAIN---------------------------------------------------------------------------------->
+
 </body>
+<footer class="site-footer">
+  <div class="page-width">
+
+    <div class="footer-block">
+      <h5>aaaaaaaaa</h5>
+      <ul>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h5>aaaaaaaaa</h5>
+      <ul>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h5>aaaaaaaaa</h5>
+      <ul>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+        <li><a href="#">aaaaaaaaa</a></li>
+      </ul>
+    </div>
+
+    <div class="brand">
+    </div>
+
+  </div>
+
+</footer>
+
+<!-----------------------------------------------------------------------------------------FOOTER----------------------------------------------------------------------------------------------->
+
 </html>
