@@ -1,20 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/html5-qrcode"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KDP</title>
 </head>
 <body>
+<header style="
+        background: #111827;
+        color: white;
+        padding: 2vh;
+        display:inline-flex;  
+        align-items: center;
+        justify-content:space-between;
+        width: 100%;
+    ">
+        <div style="font-size: 4vh; font-family:Brush Script MT, Brush Script Std, cursive;">
+            <b><span style="color:#98B6C3;">KrokDo</span>Przodu</b>
+        </div>
+
+        <nav class="dropdown" style="margin: 0 5vw;">                                                                                    
+            <input type="checkbox" id="drpBut" class="dropButton">
+            <label for="drpBut" class="menu-label">Menu ▾</label>
+            <div class="dropContent">                                                                                  
+                <ul>
+                    <li>
+                        <a href="index.html" class="active">
+                            <i class="bx bx-home-circle"></i>
+                            <span>Strona główna</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="account/signin.php">
+                            <i class='bx bx-user-circle'></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <i class='bx  bx-map'></i> 
+                            <span>Mapa punktów</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="scanner.html">
+                            <i class='bx  bx-qr-scan'></i>  
+                            <span>Skaner kodów QR</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx  bx-trophy'></i>   
+                            <span>Tabele wyników</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropButton {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        #drpBut:checked ~ .dropContent {
+            display: block;
+        }
+
+        .dropContent {
+            display: none;
+            position: absolute;
+            background-color: #111827;
+        }
+
+        .dropContent a {
+            display: block;
+        }
+
+        *{
+            padding: 0;
+        }
+
+        body{
+            font-family: system-ui, sans-serif;
+            background: #fff;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
+        h5{
+            color:#ffffff
+        }
+
+        h1{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        p{
+            margin-bottom: 1.5rem;
+            color: #000000;
+        }
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-flow: column;
+            gap: 0.25rem;
+            height: 100%;
+        }
+
+        nav a{
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            padding: 0.625rem 0.875rem;
+            font-size: 1.25rem;
+            color: #ffffff;
+            line-height: 1;
+            text-decoration: none;
+            border-radius: 0.375rem;
+        }
+
+        nav a.active,
+        nav a:hover,
+        nav a:focus-visible{
+            outline:none;
+            color:#9ae4ff;
+        }
+
+        nav a span{
+            font-size: 0.875rem;
+        }
+
+        h2{
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-block: 2rem 0.5rem;
+        }
+
+        a{
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+
+        a:hover,
+        a:focus-visible{
+            color: #9ae4ff;
+        }
+
+        a:focus-visible{
+            outline: 1px solid;
+            outline-offset: 0.5rem;
+        }
+
+        main{
+            padding-block-start: 0.75rem;
+        }
+
+        .page-width{
+            inline-size: min(80ch, 90%);
+            padding-inline: 2rem;
+            margin-inline: auto;
+            color: #000000;
+        }
+
+        .multicolumn {
+            display: flex;
+            justify-content: center;
+            margin-block-start: 3rem;
+            background-color: #9ae4ff;
+            border-block-start: 1px solid;
+        }
+
+        .multicolumn > div {
+            flex: 1;
+            padding: 3rem 1rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .multicolumn :nth-child(2) {
+            border-inline: 1px solid;
+        }
+
+        .site-footer{
+            background-color: #121212;
+            color: #ffffff;
+            padding-block: 3rem;
+        }
+
+        .footer-block li{
+            margin-block: 0.25rem;
+            list-style-type: none;
+        }
+
+        .footer-block a{
+            color: #9b9b9b;
+        }
+
+        .site-footer .page-width{
+            display: flex;
+            flex-flow: wrap;
+            gap: 1rem;
+            inline-size: min(90%, 1200px);
+        }
+
+        .footer-block a:hover,
+        .footer-block a:focus-visible{
+            color: #9ae4ff;
+        }
+
+        .brand{
+            padding: 3rem 2rem 0;
+            font-size: max(3rem, 5vw + 1rem);
+            line-height: 1.1;
+            font-weight: 100;
+            letter-spacing: 0.25rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .container{
+            position: relative;
+            z-index: 1;
+            background-color: #ffffff;
+        }
+
+        .center-flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* bez height: 100vh */
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+    </style>
+
+
+
     
 <div id="reader"></div>
 <div id="result"></div>
-
-
-
-
-
 
 
 <script>
@@ -37,5 +278,34 @@ function onScanFailure(error) {/*leave it empty*/}
 codeScanner.render(onScanSuccess, onScanFailure);
 
 </script>
+
+<footer class="site-footer">
+        <div class="page-width">
+            <div class="footer-block">
+                <h5>Kontakt</h5>
+                <ul>
+                    <li style="color: #ffffff;">krokdoprzoduzzt@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-block">
+                <h5>Partnerzy</h5>
+                <ul>
+                    <li><a href="https://www.centrumkultury.eu/">Centrum Kultury Grodzisk Mazowiecki</a></li>
+                    <li><a href="https://allegro.pl/uzytkownik/hot_dot">hotdot</a></li>
+                    <li><a href="https://fajneklocki.pl/">Fajne Klocki</a></li>
+                    <li><a href="https://wydawnictwobialepioro.pl/">Wydawnictwo Literackie Białe Pióro</a></li>
+                    <li><a href="https://smspruszkow.pl/p%C5%82ywalnia.html">Pływalnia SMS Pruszków</a></li>
+                    <li><a href="https://ckis.pruszkow.pl/">Centrum Kultury i Sportu Pruszków</a></li>
+                    <li><a href="https://wkd.com.pl/">WKD</a></li>
+                    <li><a href="https://nalesnikarnialapetite.pl/">Naleśnikarnia La Petite</a></li>
+                    <li><a href="https://mazovia.pl/pl/bip/zalatw-sprawe/kultura-i-turystyka/promocja/promocja-marki-mazowsze-serce-polski-w-roku-2024.html">Mazowsze serce Polski</a></li>
+                    <li><a href="https://www.epaka.pl/">epaka.pl</a></li>
+                </ul>
+            </div>
+            <div class="footer-block">
+                <img src="sponsors/Kopia – Jedna strona – kopia (1).jpg" style="width: 70%; height: 100%;">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
