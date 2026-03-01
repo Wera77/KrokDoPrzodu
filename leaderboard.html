@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLeaderboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Mapa</title>
+    <title>Leaderboard</title>
 </head>
 <body>
     <header style="
@@ -267,18 +268,66 @@
 
     </style>
 
-    <div class="center-flex">
-        <h1 style="color: #000000;">Mapa punktów</h1>
-        <h3 style="color: #000000;">Mapa punktów w Pruszkowie</h3>
-        <div class="map-container">
-        <iframe src="https://maphub.net/embed_h/AS5lngvW4QImg8xd" frameborder="0"></iframe>
-        </div>
-        <h3 style="color: #000000;">Mapa punktów w Grodzisku Mazowieckim</h3>
-        <div class="map-container">
-        <iframe width="768" height="576" src="https://maphub.net/embed_h/Oe8fvS4rioAqrg88" frameborder="0"></iframe>
+    <div class="wrapper">
+        <div class="lboard_section">
+            <div class="back-btn" style="display:none; cursor:pointer; font-size:22px; margin-bottom:10px;">
+                ← Wróć
+            </div>
+            <div class="tabs tabs-city">
+                <ul>
+                    <li class="active" data-city="pruszkow">Pruszków</li>
+                    <li data-city="grodzisk">Grodzisk Mazowiecki</li>
+                </ul>
+            </div>
+            <div class="tabs tabs-type" style="display:none;">
+                <ul>
+                    <li class="active" data-type="szkola">Szkoły</li>
+                    <li data-type="ludzie">Użytkownicy</li>
+                </ul>
+            </div>
+            <div class="tabs tabs-age" style="display:none;">
+                <ul>
+                    <li class="active" data-age="podst">0-14</li>
+                    <li data-age="srednie">15-19</li>
+                    <li data-age="dorosli">20-60</li>
+                    <li data-age="seniorzy">60+</li>
+                </ul>
+            </div>
+            <div class="lboard_wrap">
+                <div class="lboard_item podst" style="display: block;">
+                    <div class="lboard_mem">
+                    </div>
+                    <div class="name_bar">
+                        <p><span>1.</span>nikt</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="points">
+                        <p>195 pkt</p>
+                    </div>
+                    <div class="lboard_mem">
+                    </div>
+                    <div class="name_bar">
+                        <p><span>1.</span>nikt</p>
+                        <div class="bar_wrap">
+                            <div class="inner_bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="points">
+                        <p>195 pkt</p>
+                    </div>
+                </div>
+                <div class="lboard_item srednie" style="display: none;">
+                </div>
+                <div class="lboard_item dorosli" style="display: none;">
+                </div>
+                <div class="lboard_item seniorzy" style="display: none;">
+                </div>
+            </div>
         </div>
     </div>
-
+    <script src="scripts.js"></script>
     <footer class="site-footer">
         <div class="page-width">
             <div class="footer-block">
